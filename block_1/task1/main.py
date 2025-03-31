@@ -4,11 +4,11 @@ numbers = list(map(int, i_file.readline().split()))
 i_file.close()
 
 checker = True
-for i in range(n):
-    if 2*i <= n-1:
-        if numbers[i] <= numbers[2*i]:
-            if 2*i+1 <= n-1:
-                if numbers[i] > numbers[2*i+1]:
+for i in range(1, n+1):
+    if 2*i <= n:
+        if numbers[i-1] <= numbers[2*i-1]:
+            if 2*i+1 <= n:
+                if numbers[i-1] > numbers[2*i]:
                     checker = False
                     break
         else:
